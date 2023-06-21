@@ -6,8 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringController {
 
+    public String status = "Everything works as expected";
+
     @RequestMapping("/api/message")
     public String read_current_status(){
-        return "Everything works as expected";
+        return status;
+    }
+
+    @RequestMapping("/api/message/set")
+    public String edit_status(String newStatus){
+        status = newStatus;
+        return "ok";
     }
 }
