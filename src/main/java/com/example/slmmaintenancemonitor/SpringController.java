@@ -19,4 +19,10 @@ public class SpringController {
         status = m;
         return "ok";
     }
+
+    @RequestMapping("/api/message/reset")
+    public String reset_Status(){
+        status = "Everything works as expected";
+        return "ok";
+    }
 }
