@@ -1,6 +1,7 @@
 package com.example.slmmaintenancemonitor;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,8 +15,8 @@ public class SpringController {
     }
 
     @RequestMapping("/api/message/set")
-    public String edit_status(String newStatus){
-        status = newStatus;
+    public String edit_status(@RequestParam String m){
+        status = m;
         return "ok";
     }
 }
